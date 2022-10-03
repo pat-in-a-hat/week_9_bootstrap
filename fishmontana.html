@@ -5,8 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="fishbyte_logo_small_no_text.png" alt="" width="30" height="30"> Fishbyte</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="fishmontana.html">Map</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Waterbodies
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                      <li><a class="dropdown-item" href="#">Lakes</a></li>
+                      <li><a class="dropdown-item" href="#">Streams</a></li>
+                      <li><a class="dropdown-item" href="#">Rivers</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">All Waterbodies</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+              </div>
+        </div>
+    </nav> 
+
+<br><br>
+<div class="container-fluid text-light">
+        <form>
+            <div class="row form-group">
+                <div class="col-md-3">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name">
+                </div>
+
+            </div><br>
+
+            <div class="row form-group">
+                <div class="col-md-3">
+                    <label for="waterbody">Waterbody:</label><br>
+                    <input type="text" id="waterbody" name="waterbody"><br><br>
+                </div>
+                
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-2">
+                    <label for="waterbody-type">Waterbody Type:</label><br>
+                    <select class="form-control" id="waterbody-type">
+                        <option value="River">River</option>
+                        <option value="Lake">Lake</option>
+                        <option value="Ocean">Ocean</option>
+                    </select>
+                </div>
+
+            </div><br><br>
+            
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit New Waterbody</button>
+            </div>
+        </form>
+</div>
     
+<!--Minified js (jquery.min.js) is better for production because it gets rid of extra space (makes it smaller)-->
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>
